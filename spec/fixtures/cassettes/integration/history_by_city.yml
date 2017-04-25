@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://history.openweathermap.org/data/2.5/history/city?APPID=1111111111&city=Berlin,DE&cnt=1&q=Berlin,DE&start=1490997600&type=hour&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - history.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 25 Apr 2017 08:10:06 GMT
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '560'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET
+      Via:
+      - 1.1 eth1.accessbox.loc (Apache/2.2.9)
+    body:
+      encoding: UTF-8
+      string: '{"message":"Count: 2","cod":"200","city_id":2950159,"calctime":0.052320329,"cnt":2,"list":[{"dt":1490997600,"main":{"temp":289.13,"pressure":1012,"humidity":51,"temp_min":288.15,"temp_max":290.15},"wind":{"speed":2,"deg":160},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky
+        is Clear","icon":"01n"}]},{"dt":1491001200,"main":{"temp":286.64,"pressure":1012,"humidity":62,"temp_min":286.15,"temp_max":287.15},"wind":{"speed":0,"deg":0},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky
+        is Clear","icon":"01n"}]}]}'
+    http_version:
+  recorded_at: Tue, 25 Apr 2017 08:10:06 GMT
+recorded_with: VCR 2.9.3
